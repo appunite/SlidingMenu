@@ -22,11 +22,12 @@ configurations {
 
 dependencies {
     deployerJars 'com.googlesource.gerrit:gs-maven-wagon:3.3.1'
-    compile "com.appunite:actionbarsherlock:4.1"
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.+@aar'
+    compile 'com.android.support:support-v4:19.+'
     compile fileTree(dir: 'libs', include: '*.jar')
 }
 
-def baseVersionName = "1.0"
+def baseVersionName = "1.1"
 if (project.hasProperty("versionSuffix")) {
     project.ext.versionSuffix = project.versionSuffix
 } else {
